@@ -4,6 +4,11 @@ int	main(void)
 {
     try
 	{
+        // Test du PDF
+        int* a = new int();
+        std::cout << *a << std::endl;
+        delete a;
+
         // Test du constructeur par défaut
         Array<int> emptyArray;
         std::cout << "Empty array size: " << emptyArray.size() << std::endl;

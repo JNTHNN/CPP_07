@@ -10,10 +10,10 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		:= Bureaucrat
+NAME 		:= basics
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD -fsanitize=address -g 
+CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
 
 SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
@@ -32,11 +32,11 @@ DEP			:=	$(addprefix $(DEP_DIR), $(DEP_FILES))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@echo CREATING BUREAUCRAT
+		@echo CREATING BASICS
 		@$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
 		@sleep 1
 		@tput cuu1 dl1
-		@echo "BUREAUCRAT CREATED  " 
+		@echo "BASICS CREATED  " 
 
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
@@ -48,13 +48,13 @@ $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp
 
 clean:
 	@$(RM) -fr $(OBJ_DIR) $(DEP_DIR)
-	@echo BUREAUCRAT DESTROYED BYE !
+	@echo BASICS DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo BUREAUCRAT DESTROYED BYE !
+	@echo BASICS DESTROYED BYE !
 	@sleep 1
 	@tput cuu1 dl1
 

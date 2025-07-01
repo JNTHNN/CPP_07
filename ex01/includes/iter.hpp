@@ -21,7 +21,7 @@ void	increment(int& x)
     x += 1;
 }
 
-void increment(std::string& str)
+void    increment(std::string& str)
 {
     str += "!";
 }

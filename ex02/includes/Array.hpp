@@ -5,7 +5,6 @@
 #include <exception>
 
 
-
 template <typename T>
 class Array
 {
