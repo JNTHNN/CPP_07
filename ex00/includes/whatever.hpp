@@ -26,4 +26,5 @@ T	max(T& a, T& b)
 		return a;
 	return b;
 }
+
 #endif

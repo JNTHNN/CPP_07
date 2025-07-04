@@ -7,13 +7,13 @@ int	main(void)
 		size_t arraySize = 5;
 
 		std::cout << "Original array: ";
-		iter(array, arraySize, print);
+		iter(array, arraySize, printer);
 		std::cout << std::endl;
 
 		iter(array, arraySize, increment);
 
 		std::cout << "Modified array: ";
-		iter(array, arraySize, print);
+		iter(array, arraySize, printer);
 		std::cout << std::endl;
 	}
 	{
@@ -21,16 +21,15 @@ int	main(void)
 		size_t arraySize = 2;
 		
 		std::cout << "Original array: ";
-		iter(array, arraySize, print);
+		iter(array, arraySize, printer);
 		std::cout << std::endl;
 		
 		iter(array, arraySize, increment);
 		
 		std::cout << "Modified array: ";
-		iter(array, arraySize, print);
+		iter(array, arraySize, printer);
 		std::cout << std::endl;
 
-		std::cout << std::endl;
 	}
 
     return 0;

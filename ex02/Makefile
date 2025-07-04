@@ -1,19 +1,7 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: <votre_nom> <votre_email>                  +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: $(date +%Y/%m/%d)                       #+#    #+#              #
-#    Updated: $(date +%Y/%m/%d)                       ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME 		:= array
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD -fsanitize=address -g 
+CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
 
 SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
