@@ -5,8 +5,10 @@ Array<T>::Array() : _array(NULL), _size(0)
 }
 
 template <typename T>
-Array<T>::Array(unsigned int n) : _array(new T[n]()), _size(n)
+Array<T>::Array(unsigned int n) : _array(NULL), _size(n)
 {
+	if (n > 0)
+		_array = new T[n]();
 	return ;
 }
 
@@ -23,9 +25,16 @@ Array<T>& Array<T>::operator=(const Array& base)
 	{
         delete[] _array;
         _size = base._size;
-        _array = new T[_size];
-        for (unsigned int i = 0; i < _size; ++i)
-            _array[i] = base._array[i];
+        if (_size > 0)
+        {
+            _array = new T[_size]();
+            for (unsigned int i = 0; i < _size; ++i)
+                _array[i] = base._array[i];
+        }
+        else
+        {
+            _array = NULL;
+        }
     }
     return *this;
 }
